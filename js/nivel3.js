@@ -123,7 +123,8 @@
 // TAREA: Ahora te toca a vos! — Obtené la etiqueta h1 de la página y guardala en una variable
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
-
+const titulo = document.querySelector('h1');
+console.log(titulo);
 
 
 
@@ -145,6 +146,8 @@
 */
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
+const mediaLinks = document.querySelectorAll('li');
+console.log(mediaLinks);
 
 
 
@@ -153,7 +156,7 @@
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
-
+console.log(mediaLinks.length);
 
 
 
@@ -161,7 +164,9 @@
 
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
-
+for (let i = 0; i < mediaLinks.length; i++){
+    console.log(mediaLinks[i]);
+}
 
 
 
@@ -183,6 +188,7 @@
 
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
+titulo.textContent = 'Chau!';
 
 
 
@@ -223,6 +229,7 @@
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
+document.querySelector('img').src = 'img/kittens.jpeg';
 
 
 
@@ -247,6 +254,11 @@
 */
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
+pinkFooter = document.querySelector('footer');
+pinkFooter.style.backgroundColor = '#DA3296';
+
+tituloSans = document.querySelector('h1');
+tituloSans.style.fontFamily = "Avenir, 'Source Sans Pro', sans-serif";
 
 
 
@@ -277,9 +289,9 @@
 //       en nuestra cabecera.
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
-
-
-
+const nodoImg = document.createElement('img');
+nodoImg.src = './img/woman_bw.jpg';
+document.querySelector('header').appendChild(nodoImg);
 
 
 
