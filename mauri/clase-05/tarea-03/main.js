@@ -8,8 +8,48 @@
 
 $botonCalcular = document.querySelector('#calcular-tiempo');
 $botonCalcular.onclick = function(){
-    console.log(document.querySelectorAll('.horas').value);
-    return false 
+    calcuarHoras();
+    calcularMinutos();
+    calcularSegundos();
+    
+    return false  
 }
 
-//crear los campos de hora, minuto, segundo .. pero tambien limitarlos al valor maximo que puede recibir
+function calcuarHoras (){
+    let horas = document.querySelectorAll('.horas')
+    //console.log(horas);
+
+    totalHoras = 0;
+    for(let i = 0; i < horas.length; i++){
+        //console.log(Number(horas[i].value));
+        totalHoras += Number(horas[i].value);
+    }
+    //console.log(totalHoras);
+    
+    tiempoTotalHoras = document.querySelector('#tiempo-total-horas');
+    tiempoTotalHoras.innerText = totalHoras;
+}
+
+function calcularMinutos(){
+    let minutos = document.querySelectorAll('.minutos');
+    totalMinutos = 0;
+
+    for(let i = 0; i < minutos.length; i++){
+        totalMinutos += Number(minutos[i].value);
+    }
+
+    let tiempoTotalMinutos = document.querySelector('#tiempo-total-minutos');
+    tiempoTotalMinutos.innerText = totalMinutos;
+}
+
+function calcularSegundos(){
+    let segundos = document.querySelectorAll('.segundos');
+    totalSegundos = 0;
+
+    for(let i = 0; i < segundos.length; i++){
+        totalSegundos += Number(segundos[i].value);
+    }
+
+    let tiempoTotalSegundos = document.querySelector('#tiempo-total-segundos');
+    tiempoTotalSegundos.innerText = totalSegundos;
+}
