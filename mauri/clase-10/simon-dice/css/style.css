@@ -1,0 +1,27 @@
+
+.col-sm {
+    padding: 0px;
+}
+
+.cuadro {
+    height: 200px;
+
+    opacity: 0.5;
+    transition: opacity 500ms;
+}
+
+.rojo {
+    background-color: red;
+}
+
+.verde {
+    background-color: green;
+}
+
+.azul {
+    background-color: blue;
+}
+
+.amarillo {
+    background-color: goldenrod;
+}

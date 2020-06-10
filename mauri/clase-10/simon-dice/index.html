@@ -12,10 +12,10 @@
 <body>
 <header>
     <div class="container">
-    <div class="row">
-        <div class="alert alert-primary col-sm-8"><span class="alerta-mensaje"></span></div>
-        <div class="col-sm-2"><p class="lead">Ronda <b><span class="num-ronda"></span></b></p></div>
-        <button type="button" class="btn btn-success col-sm-2">Jugar!</button>
+    <div class="row mt-3">
+        <div id="estado" class="alert alert-primary col-sm-8 rounded-0"><span class="alerta-mensaje"></span></div>
+        <div class="col-sm-2"><p class="lead">Ronda <b><span id="ronda">...</span></b></p></div>
+        <button id="jugar" type="button" class="btn btn-success col-sm-2 mb-3 rounded-0"><b>Jugar!</b></button>
     </div>
     </div>
 </header>
@@ -24,23 +24,27 @@
     <!-- el juego -->
         <div class="row">
             <div class="col-sm">
-                <div id="cuadro-1" class="cuadro bg-danger text-muted">A</div>
+                <div id="cuadro-azul" class="cuadro azul"></div>
             </div>
             <div class="col-sm">
-                <div id="cuadro-2" class="cuadro bg-primary text-muted">B</div>
+                <div id="cuadro-rojo" class="cuadro rojo"></div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm">
-                <div id="cuadro-3" class="cuadro bg-warning text-muted">C</div>
+                <div id="cuadro-verde" class="cuadro verde"></div>
             </div>
             <div class="col-sm">
-                <div id="cuadro-4" class="cuadro bg-success text-muted">D</div>
+                <div id="cuadro-amarillo" class="cuadro amarillo"></div>
             </div>
         </div>
     </div>
 </main>
-    
+<footer>
+    <div class="container">
+    <small><p class="text-right text-muted mt-3">aca agregar credito propio, y agradecimientos y link a r argentina programa.</p></small>
+</div>
+</footer>
 <script src='./js/main.js'></script>
 </body>
 </html>
